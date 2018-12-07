@@ -54,6 +54,7 @@ To monitor the log:
     ./tail.sh
 
 Docker
+------
     docker run -d --name=ssr -p 24799:8388 sundayle/shadowsocksr:manyuser
     
     SERVER_ADDR     0.0.0.0
