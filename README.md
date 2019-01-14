@@ -65,13 +65,13 @@ To monitor the log:
 docker-compose
 ------
     shadowsocksr:
-      image: breakwa11/shadowsocksr
+      image: sundayle/shadowsocksr
       ports:
         - "8388:8388/tcp"
         - "8388:8388/udp"
       environment:
-        - METHOD=aes-256-gcm
-        - PASSWORD=9MLSpPmNt
+        - METHOD=chacha20-ietf
+        - PASSWORD=sundayle
       restart: always   
 -----
 
