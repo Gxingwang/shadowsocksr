@@ -54,9 +54,7 @@ To monitor the log:
     ./tail.sh
 
 ### Docker
-------
-    docker run -d --name=ssr -p 24799:8388 -e PASSWORD='sunday' -e METHOD='chacha20-ietf' -e PROTOCOL='auth_aes128_md5' sundayle/shadowsocksr:manyuser
-------    
+------ 
     SERVER_ADDR     0.0.0.0
     SERVER_PORT     8388
     PASSWORD        sunday
@@ -66,8 +64,6 @@ To monitor the log:
     
 docker-compose
 ------
-
-    cat docker-compose.yml
     shadowsocksr:
       image: breakwa11/shadowsocksr
       ports:
@@ -83,6 +79,9 @@ docker-compose
     chmod +x /usr/local/bin/docker-compose
     cp docker-compose.yml .
     docker-compose up -d
+    
+    ------   
+        docker run -d --name=ssr -p 8388:8388 -e PASSWORD='sundayle' -e METHOD='chacha20-ietf' -e PROTOCOL='auth_aes128_md5' sundayle/shadowsocksr:manyuser
 
 
 
