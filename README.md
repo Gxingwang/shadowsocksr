@@ -66,16 +66,17 @@ To monitor the log:
     
 docker-compose
 ------
-cat docker-compose.yml
-shadowsocksr:
-  image: breakwa11/shadowsocksr
-  ports:
-    - "8388:8388/tcp"
-    - "8388:8388/udp"
-  environment:
-    - METHOD=aes-256-gcm
-    - PASSWORD=9MLSpPmNt
-  restart: always
+
+    cat docker-compose.yml
+    shadowsocksr:
+      image: breakwa11/shadowsocksr
+      ports:
+        - "8388:8388/tcp"
+        - "8388:8388/udp"
+      environment:
+        - METHOD=aes-256-gcm
+        - PASSWORD=9MLSpPmNt
+      restart: always
 
     curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
