@@ -55,7 +55,7 @@ To monitor the log:
 
 Docker
 ------
-    docker run -d --name=ssr -p 24799:8388 sundayle/shadowsocksr:manyuser
+    docker run -d --name=ssr -p 24799:8388 -e PASSWORD='sunday' -e METHOD='chacha20-ietf' -e PROTOCOL='auth_aes128_md5' sundayle/shadowsocksr:manyuser
 ------    
     SERVER_ADDR     0.0.0.0
     SERVER_PORT     8388
