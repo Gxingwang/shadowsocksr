@@ -53,7 +53,7 @@ To monitor the log:
 
     ./tail.sh
 
-Docker
+### Docker
 ------
     docker run -d --name=ssr -p 24799:8388 -e PASSWORD='sunday' -e METHOD='chacha20-ietf' -e PROTOCOL='auth_aes128_md5' sundayle/shadowsocksr:manyuser
 ------    
@@ -63,6 +63,14 @@ Docker
     METHOD          chacha20-ietf
     PROTOCOL        auth_aes128_md5
     OBFS            tls1.2_ticket_auth
+    
+**docker-compose**
+```
+curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+cp docker-compose.yml .
+docker-compose up -d
+````
 
 Client
 ------
